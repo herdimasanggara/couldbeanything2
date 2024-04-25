@@ -1,0 +1,45 @@
+/* Existing styles.css */
+body, html {
+    height: 100%;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+#toggleButton {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+    z-index: 1000;
+}
+
+.panel {
+    position: fixed;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background-color: white;
+    transition: transform 0.5s ease;
+    overflow-y: auto; /* Enables scrolling */
+}
+
+#leftPanel {
+    left: 0;
+    transform: translateX(-100%);
+}
+
+#rightPanel {
+    right: 0;
+    transform: translateX(100%);
+}
+
+/* New styles to add horizontal lines between paragraphs */
+.panel p {
+    padding-bottom: 15px;  /* Adds padding to the bottom of each paragraph */
+    margin-bottom: 15px;  /* Adds margin to the bottom of each paragraph */
+    border-bottom: 1px solid black;  /* Adds a light grey line below each paragraph */
+}
+
+.panel p:last-child {
+    border-bottom: none;  /* Removes the border from the last paragraph to avoid an extra line */
+}
